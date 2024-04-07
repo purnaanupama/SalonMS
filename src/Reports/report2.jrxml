@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e67c3546-6670-4f8a-96c7-f1c62cf4bdfd">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from staffdetails;]]>
+	</queryString>
+	<field name="sm_id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sm_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sm_mobile" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sm_nic" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Availability_Status" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="91" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="14" y="13" width="115" height="25" uuid="64b78e78-f6db-4d7f-9211-b427f59fb4c9"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="119" y="38" width="327" height="53" uuid="c1a3447c-1420-4d0d-ad5f-2512765ba6e5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced" size="18" isBold="true"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<text><![CDATA[Staff Availability Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="15" width="80" height="20" uuid="02aed2b1-7168-4d3f-a2a2-2985b301c956"/>
+				<text><![CDATA[sm_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="105" y="15" width="100" height="20" uuid="e0cc0fa5-6a74-4c85-8f79-d5c837e889be"/>
+				<text><![CDATA[sm_name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="233" y="15" width="93" height="20" uuid="78a425c3-7056-4e4c-98bc-fd55b2fcb71d"/>
+				<text><![CDATA[sm_mobile]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="347" y="15" width="75" height="20" uuid="a405106e-8edf-4bf8-800d-b9d5325cecb2"/>
+				<text><![CDATA[sm_nic]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="446" y="15" width="109" height="20" uuid="635bda6b-786a-4a0f-8545-942038c31322"/>
+				<text><![CDATA[Availability_Status]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="53" splitType="Stretch">
+			<textField>
+				<reportElement x="1" y="15" width="79" height="20" uuid="774227b0-d9b8-4476-a587-0005226cdf85"/>
+				<textFieldExpression><![CDATA[$F{sm_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="105" y="15" width="100" height="20" uuid="723df012-5b46-4589-82e5-a15a579caa4c"/>
+				<textFieldExpression><![CDATA[$F{sm_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="233" y="15" width="93" height="20" uuid="c6fa8571-d9a4-45db-92d8-211e40e12b04"/>
+				<textFieldExpression><![CDATA[$F{sm_mobile}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="347" y="15" width="75" height="20" uuid="d20e3f92-97c6-460b-8b16-3225f8fb1543"/>
+				<textFieldExpression><![CDATA[$F{sm_nic}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="446" y="15" width="109" height="20" uuid="0a03c3a6-1a38-4b9b-8acb-d99601293add"/>
+				<textFieldExpression><![CDATA[$F{Availability_Status}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
